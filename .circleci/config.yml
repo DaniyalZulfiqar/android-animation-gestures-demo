@@ -1,0 +1,16 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/configuration-reference
+version: 2.1
+orbs:
+  sofy-app-upload-circleci-orb: sofy/sofy-app-upload-circleci-orb@0.0.2       
+# Define a job to be invoked later in a workflow.
+# See: https://circleci.com/docs/configuration-reference/#jobs
+
+workflows:
+  jobs:
+    sofy-app-upload-circleci-orb@0.0.2/connect_sofy:
+      subscription_key: 'd3b15aa5-8a0b-4f39-9276-7fe298255659'
+      build_path: '../app.apk'
+
+# Orchestrate jobs using workflows
+# See: https://circleci.com/docs/configuration-reference/#workflows
